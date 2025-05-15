@@ -22,7 +22,7 @@ SEVERITY_FACTORS = {"green": 1.0, "orange": 1.25, "red": 1.5}
 
 dataset_df = pd.read_csv(os.path.join(BASE_DIR, 'final_features_risk_calculator.csv'))
 reference_dataset = pd.read_csv(os.path.join(BASE_DIR, 'final_dataset_risk_calculator.csv'))
-model = load('disaster_risk_calculator_model.joblib')
+model = load(os.path.join(BASE_DIR, 'disaster_risk_calculator_model.joblib'))
 
 merged_df = dataset_df.copy()
 merged_df[['Country','Subregion','Year','ISO3.Code']] = reference_dataset[['Country','Subregion','Year','ISO3.Code']]
