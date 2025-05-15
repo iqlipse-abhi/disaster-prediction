@@ -17,11 +17,11 @@ HAZARD_WEIGHTS = {
     "drought":    {"base": 1.4},
     "other":      {"base": 1.2},
 }
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SEVERITY_FACTORS = {"green": 1.0, "orange": 1.25, "red": 1.5}
 
-dataset_df = pd.read_csv('final_features_risk_calculator.csv')
-reference_dataset = pd.read_csv('final_dataset_risk_calculator.csv')
+dataset_df = pd.read_csv(os.path.join(BASE_DIR, 'final_features_risk_calculator.csv'))
+reference_dataset = pd.read_csv(os.path.join(BASE_DIR, 'final_dataset_risk_calculator.csv'))
 model = load('disaster_risk_calculator_model.joblib')
 
 merged_df = dataset_df.copy()
