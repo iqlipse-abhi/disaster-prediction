@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Government Disaster Alert Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0B3D91;
+      --secondary-color: #1E88E5;
+      --background-color: #F5F5F5;
+      --text-color: #333;
+      --success-color: #4CAF50;
+      --danger-color: #F44336;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: var(--text-color);
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-header h2 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .login-header p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .forgot-password a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .security-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <h2>Natural Disaster Alert</h2>
+    </div>
+    <form action="/" method="POST">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="e.g., user@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" />
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+      <div class="signup-link" style="text-align: center; margin-top: 1rem; font-size: 0.95rem;">
+      <p>Don't have an account? <a href="/signup" style="color: #4361ee; font-weight: 500;">Sign Up</a></p>
+      </div>
+    </form>
+    <div class="security-note">
+      <p>🔒 Your information is securely encrypted.</p>
+    </div>
+  </div>
+</body>
+</html>
