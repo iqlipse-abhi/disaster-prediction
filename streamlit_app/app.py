@@ -8,9 +8,6 @@ from geonamescache import GeonamesCache
 import pycountry
 import os
 
-model = load('disaster_risk_calculator_model.joblib')
-print("Model loaded successfully!")
-
 HAZARD_WEIGHTS = {
     "earthquake": {"base": 2.5},
     "flood":      {"base": 1.8},
